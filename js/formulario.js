@@ -9,13 +9,8 @@ const prevision = [
 // - Inicio de (document).ready() -
 $(document).ready(function() {
 
-    console.log("hola mundo");
     // - Select2 -
     inicializarSelect2Prevision();
-
-    $('#btnReservarHora').click(function() { 
-        console.log('Hello');
-    });
     // - Fin de Select2 -
 
 });
