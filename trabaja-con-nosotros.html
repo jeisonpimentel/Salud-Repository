@@ -6,10 +6,131 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous"> 		
 		
-    <title>Document</title>
+    <title>Trabaja con Nosotros</title>
 </head>
 <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="imagenes/logo_vida_camara.png" alt=""></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse d-flex" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+
+              <li class="nav-item">
+                <a class="nav-link mr-2" href="reserva-hora-form.html">Inicio</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link mr-2" href="reserva-hora-form.html">Reserva Medicina General</a>
+              </li>
+
+              <!-- Dropdown -->
+              <li class="nav-item dropdown mr-2">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                      Información Al Paciente
+                  </a>
+                  <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#">¿Quienes somos?</a>
+                      <a class="dropdown-item" href="#">Contáctanos</a>
+                      <a class="dropdown-item" href="#">Centros medicos disponibles</a>
+                  </div>
+              </li>
+  
+              <!-- Dropdown -->
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle mr-2" href="#" id="navbardrop" data-toggle="dropdown">
+                      Información sobre el COVID
+                  </a>
+                  <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#">Reserva hora para PCR</a>
+                      <a class="dropdown-item" href="#">Reserva hora para vacuna</a>
+                      <a class="dropdown-item" href="#">Conoce los síntomas</a>
+                  </div>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link mr-2" href="#">Reserva Cita Online</a>
+              </li>
+  
+              <li class="nav-item">
+                <a class="nav-link mr-2" href="#">Convenios o Beneficios</a>
+              </li>    
+  
+            </ul>
+          </div> 
+        </div>
+      </nav>
     
+    <!-- IMAGEN TRABAJA CON NOSTROS -->
+    <div style="width: 80%; margin: auto; margin-block-end: 30px;">
+    <img src="imagenes/banner-trabaja-con-nosotros-1400x500pixeles.png" class="card-img" alt="...">
+    </div>
+
+    <!-- INICIO FORMULARIO -->
+    <div class="container">   
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header text-center bg-info text-white"><h4>Postulación</h4></div>
+                <div class="card-body">
+                    <form action="#">
+                        <div class="form-row">
+
+                            <div class="form-group col-md-6">
+                                <label>Nombre</label>
+                                <input type="text" class="form-control" id="rutPaciente" placeholder="Ingrese su nombre">
+                            </div>  
+
+                            <div class="form-group col-md-6">
+                                <label>Correo Electronico</label>
+                                <input type="text" class="form-control" id="emailPaciente" placeholder="Ingrese su email">
+                            </div>
+
+                            <div class="form-group col-md-6">
+                                <label>Telefono / Celular</label>
+                                <input type="text" class="form-control" id="telefonoCelular" placeholder="Ingrese su teléfono">
+                            </div>
+
+
+                            <div class="form-group col-md-6">
+                                <label> Mensaje (opcional)  </label>
+                                <input type="text" class="form-control" id="mensaje" placeholder="Ingrese un mensaje">
+                            </div>  
+
+                            <div class="form-group col-md-6">
+                                <label> Adjunta tu CV </label>
+                                <button type="button" class="btn btn-light" style="margin-left: 10px;"> Selecciona un archivo </button>
+                            </div>                            
+                            
+                            
+                            <div class="form-group col-md-12">
+                                <button class="btn btn-primary btn-block btn-lg" id="btnReservarHora">Enviar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="col-sm">
+                <div class="card" style="width: 3   0rem;">
+                    <img src="imagenes/trab_con_nos.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <button class="btn btn-primary btn-block">
+                            Postula!
+                        </button>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>     
+    <!-- FIN FORMULARIO-->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
 </body>
