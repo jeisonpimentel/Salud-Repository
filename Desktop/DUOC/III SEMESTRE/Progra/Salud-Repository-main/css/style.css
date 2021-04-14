@@ -1,0 +1,24 @@
+/*html, body {
+    font-size: 25px !important;
+    font-family: montserratmedium !important;
+    
+}
+*/
+.card{
+    text-align: center;
+    background-color: rgba(17, 1, 32, 0.877);
+    width: 350px;
+    height: 350px;
+    margin: 50px;
+}
+.ct1, .ct2, .ct3 {
+    height: 80px;
+    width: 80px;
+    margin-left: 140px;
+}
+h4{
+    color: rgb(238, 255, 0);
+}
+.titulos{
+    text-align: center;
+}

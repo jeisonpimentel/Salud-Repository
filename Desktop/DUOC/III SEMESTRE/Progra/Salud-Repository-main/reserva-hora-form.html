@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous"> 		
+	<link rel="stylesheet" href="estilos.css">
+    <title>Reserva de horas</title>
+</head>
+<body>
+
+    <!--INICIO Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="imagenes/LogoFormal.png" alt=""></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse d-flex" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+  
+              <!-- Dropdown -->
+              <li class="nav-item dropdown mr-2">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                      Información Al Paciente
+                  </a>
+                  <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#">¿Quienes somos?</a>
+                      <a class="dropdown-item" href="#">Contáctanos</a>
+                      <a class="dropdown-item" href="#">Centros medicos disponibles</a>
+                  </div>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link mr-2" href="reserva-hora-form.html">Reserva Medicina General</a>
+              </li>
+  
+              <!-- Dropdown -->
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle mr-2" href="#" id="navbardrop" data-toggle="dropdown">
+                      Información sobre el COVID
+                  </a>
+                  <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#">Reserva hora para PCR</a>
+                      <a class="dropdown-item" href="#">Reserva hora para vacuna</a>
+                      <a class="dropdown-item" href="#">Conoce los síntomas</a>
+                  </div>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link mr-2" href="#">Reserva Cita Online</a>
+              </li>
+  
+              <li class="nav-item">
+                <a class="nav-link mr-2" href="#">Convenios o Beneficios</a>
+              </li>    
+  
+            </ul>
+          </div> 
+        </div>
+      </nav>
+    <!--FIN Navbar-->
+
+    <!--INICIO CONTENIDO PRINCIPAL-->
+
+    <div class="container py-4 text-center">
+        <h4 class="text-dark py-2" style="font-family: montserratmedium;">Para reservar una hora seleccione una de las siguientes opciones</h4>
+
+        <div class="alert alert-info col-md-12">
+            <p>Conoce nuestro servicio de Videoconsulta, disponibilidad inmediata en Consultas Médicas de lunes a domingo hasta las 22:00 hrs Agenda tu <a href="reserva-hora-online.html">Videoconsulta aquí</a></p>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header text-center bg-info text-white"><h4>Reserva tú hora</h4></div>
+                    <div class="card-body">
+                        <form>
+                            <div class="form-row">
+
+								<div class="form-group col-md-6">
+									<label>Rut del paciente</label>
+									<input type="text" class="form-control" id="rutPaciente"
+                                    placeholder="Ingrese su rut">
+								</div>  
+
+                                <div class="form-group col-md-6">
+                                    <label>Previsión</label>
+                                    <select class="form-control" id="tipoPrevision">
+                                        <option value="-1">Seleccione una opción</option>
+                                        <option value="2">Fonasa</option>
+                                        <option value="3">Isapre Colmena</option>
+                                        <option value="4">Isapre Consalud</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group col-md-6">
+                                    <label>Especialidad</label>
+                                    <select class="form-control" id="tipoEspecialidad">
+                                        <option value="-1">Seleccione una opción</option>
+                                        <option value="2">Medicina General</option>
+                                        <option value="3">Cardiologia</option>
+                                        <option value="4">Ginecologia</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group col-md-6">
+                                    <label>Región</label>
+                                    <select class="form-control" id="region">
+                                        <option value="-1">Seleccione una opción</option>
+                                        <option value="2">Metropolitana</option>
+                                        <option value="3">Antofagasta</option>
+                                        <option value="4">Concepción</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group col-md-6">
+                                    <label>Comuna</label>
+                                    <select class="form-control" id="comuna">
+                                        <option value="-1">Seleccione una opción</option>
+                                        <option value="1">Independencia</option>
+                                        <option value="2">Santiago Centro</option>
+                                        <option value="3">Ñuñoa</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group col-md-6">
+                                    <label>Centro Médico</label>
+                                    <select class="form-control" id="centroMedico">
+                                        <option value="-1">Seleccione una opción</option>
+                                        <option value="1">Ejemplo Independencia</option>
+                                        <option value="2">Ejemplo Centro</option>
+                                        <option value="3">Ejemplo Ñuñoa</option>
+                                    </select>
+                                </div>
+
+								<div class="form-group col-md-6">
+									<label>Fecha de consulta</label>
+									<input type="date" class="form-control" id="fechaConsulta">
+								</div>
+                                
+								<div class="form-group col-md-6">
+                                    <!--Espacio Reservado-->
+								</div>
+
+								<div class="form-group col-md-6">
+									<label>Correo Electronico</label>
+									<input type="text" class="form-control" id="emailPaciente" placeholder="Ingrese su email">
+								</div>
+
+								<div class="form-group col-md-6">
+									<label>Telefono Celular</label>
+									<input type="text" class="form-control" id="telefonoCelular">
+								</div>
+                                
+                                <div class="form-group col-md-12">
+                                    <button class="btn btn-primary btn-block btn-lg">Reservar hora</button>
+								</div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="col-sm">
+                    <div class="card" style="width: 20rem;">
+                        <img src="imagenes/foto_0000001920200407140537.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <button class="btn btn-primary btn-block">
+                                Contáctanos
+                            </button>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--FIN CONTENIDO PRINCIPAL-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+</body>
+</html>
