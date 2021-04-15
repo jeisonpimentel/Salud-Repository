@@ -20,7 +20,7 @@ html, body{
     margin: 0px;
 }
 
-fondo2 {
+.fondo2 {
 	font-family: open_sanslight; 
 	font-style: italic;
 	background-image: url('../imagenes/fondo2.png');
