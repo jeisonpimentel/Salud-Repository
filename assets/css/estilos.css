@@ -121,3 +121,10 @@ HEAD:assets/css/estilos.css
 	font-size: 40px;
 	color: black;
 }
+
+
+
+#map{
+	height: 200px;
+	width: 50%;
+}
