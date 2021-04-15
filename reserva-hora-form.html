@@ -124,25 +124,31 @@
             <div class="row">
               <div class="col-sm">
                 <div class="card" style="width: 18rem;">
-                    <img src="imagenes/icon_procedimientos.svg" class="card-img-top" alt="..." height="200px;">
+                    <img src="imagenes/icon_procedimientos.svg" class="card-img-top" alt="..." height="150px;">
                     <div class="card-body">
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <h5 class="card-text text-primary">Consulta Medica / Kinesiología</h5>
+                        <p>Agenda aquí tus horas de consultas medicas y de Kinesiología</p>
+                        <button id="reservaMedicaKinesiolgia" class="btn btn-info btn-xs btn-block">Más información</button>
                     </div>
                   </div>
               </div>
               <div class="col-sm">
                 <div class="card" style="width: 18rem;">
-                    <img src="imagenes/icon_imagenologia.svg" class="card-img-top" alt="..."  height="200px;">
+                    <img src="imagenes/icon_imagenologia.svg" class="card-img-top py-4" alt="..."  height="150px;">
                     <div class="card-body">
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <h5 class="card-text text-primary">Exámenes Médicos / Procedimientos</h5>
+                      <p>Agenda aquí tus horas de exámenes de imagenes y procedimientos</p>
+                      <button id="reservaExamenesMedicosProcedimiento" class="btn btn-info btn-xs btn-block">Más información</button>
                     </div>
                   </div>
               </div>
               <div class="col-sm">
                 <div class="card" style="width: 18rem;">
-                    <img src="https://yeisonpx.com/wp-content/uploads/2020/03/csharp_api1.jpg" class="card-img-top" alt="...">
+                    <img src="imagenes/icon_laboratorio.svg" class="card-img-top py-4" alt="..."  height="150px;">
                     <div class="card-body">
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <h5 class="card-text text-primary">Examenes Laboratorio / Imagenología</h5>
+                      <p>Agenda aquí tus horas de exámenes de Laboratorio y imagenología</p>
+                      <button id="reservaLaboratorioImagenologia" class="btn btn-info btn-xs btn-block">Más información</button>
                     </div>
                   </div>
               </div>
@@ -150,11 +156,10 @@
         </div>	
         <!--Fin prueba-->
     </div>
-
-    <div class="container">
-
+ 
+    <div class="container mb-5" id="contenidoFormulario">
         <dviv class="row">
-            <div class="col-md-8">
+            <div class="col-md-12">
                 <div class="card">
                     <div class="card-header text-center bg-info text-white"><h4>Reserva tú hora</h4></div>
                     <div class="card-body">
@@ -162,12 +167,40 @@
                             <div class="form-row">
 
 								<div class="form-group col-md-6">
-									<label>Rut del paciente</label>
-									<input type="text" class="form-control" id="rutPaciente"
-                                    placeholder="Ingrese su rut">
+									<label>RUT Paciente</label>
+                                    <select class="form-control" id="clienteDatos">
+                                        <option value="-1"></option>
+                                    </select>
 								</div>  
 
                                 <div class="form-group col-md-6">
+                                    <!--Espacio Vacio-->
+								</div>  
+
+                                <div class="form-group col-md-6" id="divNombrePaciente">
+									<label>Nombre completo</label>
+									<input type="text" class="form-control" id="nombrePaciente"
+                                    >
+								</div>  
+
+                                <div class="form-group col-md-6" id="divApellidosPaciente">
+									<label>Apellidos</label>
+									<input type="text" class="form-control" id="apellidosPaciente"
+                                    >
+								</div>  
+
+
+								<div class="form-group col-md-6" id="divEmailPaciente">
+									<label>Correo Electronico</label>
+									<input type="text" class="form-control" id="emailPaciente" >
+								</div>
+
+								<div class="form-group col-md-6" id="divTelefonoCelular">
+									<label>Telefono Celular</label>
+									<input type="text" class="form-control" id="telefonoCelular">
+								</div>
+
+                                <div class="form-group col-md-6" id="crearPrevision">
                                     <label>Previsión</label>
                                     <select class="form-control" id="tipoPrevision">
                                         <option value="-1"></option>
@@ -175,42 +208,30 @@
                                 </div>
 
                                 <div class="form-group col-md-6">
-                                    <label>Especialidad</label>
-                                    <select class="form-control" id="tipoEspecialidad">
-                                        <option value="-1">Seleccione una opción</option>
-                                        <option value="2">Medicina General</option>
-                                        <option value="3">Cardiologia</option>
-                                        <option value="4">Ginecologia</option>
+                                    <label>Especialidades</label>
+                                    <select class="form-control" id="especialidades">
+                                        <option value="-1"></option>
                                     </select>
                                 </div>
 
                                 <div class="form-group col-md-6">
                                     <label>Región</label>
                                     <select class="form-control" id="region">
-                                        <option value="-1">Seleccione una opción</option>
-                                        <option value="2">Metropolitana</option>
-                                        <option value="3">Antofagasta</option>
-                                        <option value="4">Concepción</option>
+                                        <option value="-1"></option>
                                     </select>
                                 </div>
 
                                 <div class="form-group col-md-6">
                                     <label>Comuna</label>
                                     <select class="form-control" id="comuna">
-                                        <option value="-1">Seleccione una opción</option>
-                                        <option value="1">Independencia</option>
-                                        <option value="2">Santiago Centro</option>
-                                        <option value="3">Ñuñoa</option>
+                                        <option value="-1"></option>
                                     </select>
                                 </div>
 
                                 <div class="form-group col-md-6">
                                     <label>Centro Médico</label>
                                     <select class="form-control" id="centroMedico">
-                                        <option value="-1">Seleccione una opción</option>
-                                        <option value="1">Ejemplo Independencia</option>
-                                        <option value="2">Ejemplo Centro</option>
-                                        <option value="3">Ejemplo Ñuñoa</option>
+                                        <option value="-1"></option>
                                     </select>
                                 </div>
 
@@ -224,37 +245,12 @@
                                 
 								</div>
 
-								<div class="form-group col-md-6">
-									<label>Correo Electronico</label>
-									<input type="text" class="form-control" id="emailPaciente" placeholder="Ingrese su email">
-								</div>
-
-								<div class="form-group col-md-6">
-									<label>Telefono Celular</label>
-									<input type="text" class="form-control" id="telefonoCelular">
-								</div>
                                 
                                 <div class="form-group col-md-12">
-                                    <button class="btn btn-primary btn-block btn-lg" id="btnReservarHora">Reservar hora</button>
+                                    <button class="btn btn-info btn-block btn-lg" id="btnReservarHora">Buscar horas disponibles</button>
 								</div>
                             </div>
                         </form>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card shadow" style="width: 20rem;">
-                    <div class="inner">
-                        <img src="imagenes/bg_form.jpg"
-                            class="card-img-top" alt="SegundaPersona">
-                    </div>
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Virginia Casique</h5>
-                        <p class="card-text">Estar asegurado en esta compañia es
-                            sentirse seguro en todo momento, cuenta con las mejores
-                            opciones.</p>
-                        <br /> <a class="btn btn-outline-danger boton"
-                            href="/contactanos">Leer más...</a>
                     </div>
                 </div>
             </div>

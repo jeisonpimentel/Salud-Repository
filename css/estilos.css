@@ -12,7 +12,7 @@ html, body{
 .mensajeInformacion {
 	font-family: open_sanslight; 
 	font-style: italic;
-	background: #5bc0de;
+	background: orange;
 	color: white;
 }
 
@@ -20,15 +20,15 @@ html, body{
     margin: 0px;
 }
 
-/* .fondo2 {
+fondo2 {
 	font-family: open_sanslight; 
 	font-style: italic;
-	background-image: url('/imagenes/fondo2.png');
+	background-image: url('../imagenes/fondo2.png');
 	height: 70vh;
 	background-position: top top;
 	background-size: cover;
 	min-height: 500px;
-} */
+} 
 
 .texto-informativo {
 	font-family: open_sanslight; 
@@ -79,6 +79,6 @@ h2 {
 	transform: scale(1.5);
 }
 
-.footers{
-	background: orange;
+a {
+	text-decoration: none;
 }
