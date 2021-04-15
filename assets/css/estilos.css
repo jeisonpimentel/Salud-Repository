@@ -122,9 +122,69 @@ HEAD:assets/css/estilos.css
 	color: black;
 }
 
-
-
 #map{
 	height: 200px;
 	width: 50%;
+}
+
+.social-face {
+	cursor: pointer;
+    margin-top: 10%;
+	margin-left: 150%;
+    height: 6vh;
+    background-repeat: no-repeat;
+}
+.social-twt {
+
+    cursor: pointer;
+    height: 6vh;
+    background-repeat: no-repeat;
+    margin-top: 10%;
+	margin-left: 150%;
+	
+	
+}
+.social-goo {
+    cursor: pointer;
+    height: 6vh;
+    background-repeat: no-repeat;
+    margin-top: 10%;
+	margin-left: 150%;
+}
+.social li {
+    display: inline-block;
+    margin-right: .6rem;
+}
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+.CUERPO{
+    margin: 50px;
+    margin-bottom: 5rem;
+    font-size: 15px;
+    font-weight: normal;
+    background-color: #fff;
+    line-height: 170%;
+    text-align: justify;
+    clear: both;
+}
+.title-lg {
+    font-size: 3.6rem;
+    line-height: 4rem;
+	margin-left: 50px;
+	margin-top: 30px;
+}
+.fest{
+	margin: 50px;
+    margin-bottom: 5rem;
+	font-size: 15px;
+    font-weight: normal;
+
 }
