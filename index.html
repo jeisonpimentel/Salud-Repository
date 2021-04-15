@@ -1,20 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+    crossorigin="anonymous"></script>
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous"> 		
-	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
- 
   <link rel="stylesheet" href="assets/css/estilos.css">
+
 
   <title>Centro Medico</title>
 </head>
+
 <body>
 
+  <!--INICIO: Contenido reutilizable mensaje informativo-->
   <div class="mensajeInformacion">
     <div class="alert alert-dismissible fade show text-center" id="contenedorMensajeImportante">
       <button type="button" class="close text-white" data-dismiss="alert">&times;</button>
@@ -35,8 +43,10 @@
       </div>
     </div>
   </div>
+  <!--FIN: Contenido reutilizable mensaje informativo-->
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <!--INICIO: Contenido reutilizable NavBar-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-info">
     <div class="container-fluid">
       <a class="navbar-brand" href="#"><img src="assets/img/LogoForma2.png" alt=""></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
@@ -48,13 +58,14 @@
         <ul class="navbar-nav">
 
           <li class="nav-item">
-            <a class="nav-link mr-2" href="reserva-hora-form.html" style="font-size: 17px;">Reserva Medicina General</a>
+            <a class="nav-link mr-2 text-white" href="reserva-hora-form.html" style="font-size: 17px;">Reserva Medicina
+              General</a>
           </li>
 
           <!-- Dropdown -->
           <li class="nav-item dropdown mr-2">
-            <a class="nav-link dropdown-toggle" href="#" style="font-size: 17px;"
-            id="navbardrop" data-toggle="dropdown">
+            <a class="nav-link dropdown-toggle  text-white" href="#" style="font-size: 17px;" id="navbardrop"
+              data-toggle="dropdown">
               Información Al Paciente
             </a>
             <div class="dropdown-menu">
@@ -66,8 +77,8 @@
 
           <!-- Dropdown -->
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle mr-2" href="#" style="font-size: 17px;"
-            id="navbardrop" data-toggle="dropdown">
+            <a class="nav-link dropdown-toggle mr-2 text-white" href="#" style="font-size: 17px;" id="navbardrop"
+              data-toggle="dropdown">
               Información sobre el COVID
             </a>
             <div class="dropdown-menu">
@@ -78,107 +89,113 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link mr-2" href="#" style="font-size: 17px;">Videoconsulta</a>
+            <a class="nav-link mr-2 text-white" href="#" style="font-size: 17px;">Videoconsulta</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link mr-2" href="#" style="font-size: 17px;">Convenios o Beneficios</a>
+            <a class="nav-link mr-2 text-white" href="#" style="font-size: 17px;">Convenios o Beneficios</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link mr-5 text-white" href="#" style="font-size: 17px;">Login</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
+  <!--FIN: Contenido reutilizable NavBar-->
 
+  <!--Inicio: Carousel propio de la pagina principal-->
   <div class="container mt-5">
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
 
-      <div class="carousel-item active">
-        <a href="reserva-hora-online.html"><img src="assets/img/imagen-carousel1.png"d-block w-100" alt="..." width="100%;" height="400px;"></a>
-      </div>
+        <div class="carousel-item active">
+          <a href="reserva-hora-online.html"><img src="assets/img/imagen-carousel1.png" d-block w-100" alt="..."
+              width="100%;" height="400px;"></a>
+        </div>
 
-      <div class="carousel-item">
-        <a href="#"><img src="assets/img/imagen-carousel2.png" class="d-block w-100" alt="..." width="100%;" height="400px;"></a>
-      </div>
+        <div class="carousel-item">
+          <a href="#"><img src="assets/img/imagen-carousel2.png" class="d-block w-100" alt="..." width="100%;"
+              height="400px;"></a>
+        </div>
 
-      <div class="carousel-item">
-        <a href="centros-disponibles.html"><img src="assets/img/imagen-carousel3.png" class="d-block w-100" alt="..." width="100%;" height="400px;"></a>
-      </div>
+        <div class="carousel-item">
+          <a href="centros-disponibles.html"><img src="assets/img/imagen-carousel3.png" class="d-block w-100" alt="..."
+              width="100%;" height="400px;"></a>
+        </div>
 
       </div>
       <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Anterior</span>
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Anterior</span>
       </a>
       <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Siguiente</span>
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Siguiente</span>
       </a>
     </div>
   </div>
+  <!--FIN: Carousel propio de la pagina principal-->
 
   <div class="ligth">
-		<div class="container contenedor">
+    <div class="container contenedor">
+      <div>
+        <h1 class="text-center">Te invitamos a conocer lo que opinan de
+          nosotros</h1>
+        <h4 class="text-center py-3">Esperemos que seas parte de esta familia</h4>
 
-			<div>
-				<h1 class="text-center">Te invitamos a conocer lo que opinan de
-					nosotros</h1>
-				<h4 class="text-center py-3">Esperemos que seas parte de esta familia</h4>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-4">
+          <div class="card shadow" style="width: 20rem;">
+            <div class="inner">
+              <img src="assets/img/Dentales.jpg" class="card-img-top" alt="SegundaPersona">
+            </div>
+            <div class="card-body text-center">
+              <h5 class="card-title">Virginia Casique</h5>
+              <p class="card-text">Estar asegurado en esta compañia es
+                sentirse seguro en todo momento, cuenta con las mejores
+                opciones.</p>
+              <br /> <a class="btn btn-outline-danger boton" href="/contactanos">Leer más...</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card shadow" style="width: 20rem;">
+            <div class="inner">
+              <img src="assets/img/caluga-home-liberty-hogar.jpg" class="card-img-top" alt="primeraPersona">
+            </div>
+            <div class="card-body text-center">
+              <h5 class="card-title">Jeison Pimentel</h5>
+              <p class="card-text">Estar asegurado en esta compañia es
+                sentirse seguro en todo momento, cuenta con las mejores
+                opciones.</p>
+              <br /> <a class="btn btn-outline-danger boton" href="contactanos">Leer más...</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card shadow" style="width: 20rem;">
+            <div class="inner">
+              <img src="assets/img/caluga-home-atencion-terceros.png" class="card-img-top" alt="TerceraPersona">
+            </div>
+            <div class="card-body text-center">
+              <h5 class="card-title">Liah Cataleya</h5>
+              <p class="card-text">Estar asegurado en esta compañia es
+                sentirse seguro en todo momento, cuenta con las mejores
+                opciones.</p>
+              <br /> <a class="btn btn-outline-danger boton" href=contactanos">Leer más...</a>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+  </div>
 
-			</div>
-			<div class="row justify-content-center">
-				<div class="col-md-4">
-					<div class="card shadow" style="width: 20rem;">
-						<div class="inner">
-							<img src="assets/img/Dentales.jpg"
-								class="card-img-top" alt="SegundaPersona">
-						</div>
-						<div class="card-body text-center">
-							<h5 class="card-title">Virginia Casique</h5>
-							<p class="card-text">Estar asegurado en esta compañia es
-								sentirse seguro en todo momento, cuenta con las mejores
-								opciones.</p>
-							<br /> <a class="btn btn-outline-danger boton"
-								href="/contactanos">Leer más...</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="card shadow" style="width: 20rem;">
-						<div class="inner">
-							<img src="assets/img/caluga-home-liberty-hogar.jpg"
-								class="card-img-top" alt="primeraPersona">
-						</div>
-						<div class="card-body text-center">
-							<h5 class="card-title">Jeison Pimentel</h5>
-							<p class="card-text">Estar asegurado en esta compañia es
-								sentirse seguro en todo momento, cuenta con las mejores
-								opciones.</p>
-							<br /> <a class="btn btn-outline-danger boton"
-								href="contactanos">Leer más...</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="card shadow" style="width: 20rem;">
-						<div class="inner">
-							<img src="assets/img/caluga-home-atencion-terceros.png"
-								class="card-img-top" alt="TerceraPersona">
-						</div>
-						<div class="card-body text-center">
-							<h5 class="card-title">Liah Cataleya</h5>
-							<p class="card-text">Estar asegurado en esta compañia es
-								sentirse seguro en todo momento, cuenta con las mejores
-								opciones.</p>
-							<br /> <a class="btn btn-outline-danger boton"
-								href=contactanos">Leer más...</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
 
+  </footer>
+  <!--FIN: Creación del Footer-->
 </body>
 
 </html>
