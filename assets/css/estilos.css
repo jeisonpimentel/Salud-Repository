@@ -83,24 +83,41 @@ HEAD:assets/css/estilos.css
 .footers{
 	background: orange;
 }
-/*
-.card{
-	vertical-align:sub;
+
+.contact {
     text-align: center;
-    background-color: rgba(17, 1, 32, 0.877);
-    width: 350px;
-    height: 350px;
-    margin: 50px;
+    background-color: rgba(17, 1, 32, 0.88);
+    width: 300px;
+    height: 300px;
+    margin-top: 50px;
+	
 }
+
 .ct1, .ct2, .ct3 {
     height: 80px;
     width: 80px;
-    margin-left: 140px;
+    margin-left: 100px;
 }
-h4{
-    color: rgb(238, 255, 0);
+
+.enunciado {
+    color: rgb(233, 255, 32);
+}
+
+.questions{
+	color: black;
 }
 .titulos{
     text-align: center;
 }
-*/
+
+.imgcall{
+	width: 200px;
+}
+.imgcall2{
+	width: 140px;
+	margin-left:50px;
+}
+.fa-exchange-alt{
+	font-size: 40px;
+	color: black;
+}

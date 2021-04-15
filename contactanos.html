@@ -68,220 +68,268 @@
   </nav>
   <!--FIN Navbar-->
 
-<h1 style="text-align: center; margin: 30px;"> Bienvenido al portal de Atención al Cliente de InMed</h1>
-<h5 style="text-align: center;">Por favor selecciona la opción de tu preferencia para comunicarte con nuestro equipo:</h5>
-<div class="row row-cols-1 row-cols-md-3" style=" width: 80%; margin: auto;">
-  <div class="col mb-4">
-    <div class="card h-100 contact" style="width: 18rem">
-      <img src="assets/img/contact1.png"
-        class="card-img-top ct1" alt="...">
-      <div class="card-body enunciado">
-        <p class="card-text">Ingresar una consulta, felicitación, requerimiento y/o sugerencia</p>
-        <br>
+  <h1 style="text-align: center; margin: 30px;"> Bienvenido al portal de Atención al Cliente de InMed</h1>
+  <h5 style="text-align: center;">Por favor selecciona la opción de tu preferencia para comunicarte con nuestro equipo:
+  </h5>
+  <div class="row row-cols-1 row-cols-md-3" style=" width: 80%; margin: auto;">
+    <div class="col mb-4">
+      <div class="card h-100 contact" style="width: 18rem">
+        <img src="assets/img/contact1.png" class="card-img-top ct1" alt="...">
+        <div class="card-body enunciado">
+          <p class="card-text">Ingresar una consulta, felicitación, requerimiento y/o sugerencia</p>
+          <br>
           <!-- Button trigger modal -->
           <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
             Enviar solicitud <span><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
           </button>
-          
+
           <!-- Modal -->
-          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
-                  <span> <p class="modal-title" id="exampleModalLabel">Estimado paciente para ingresar una solicitud correspondiente a: consultas, felicitaciones, requerimientos y/o
-                  sugerencias, le solicitamos por favor completar los campos del formulario que se encuentra a continuación, tome en
-                  cuenta que aquellos con el indicador (*) son campos obligatorios.</p></span>
+                  <span>
+                    <p style="color: gray;" class="modal-title" id="exampleModalLabel">Estimado paciente para ingresar
+                      una solicitud correspondiente a: consultas, felicitaciones, requerimientos y/o
+                      sugerencias, le solicitamos por favor completar los campos del formulario que se encuentra a
+                      continuación, tome en
+                      cuenta que aquellos con el indicador (*) son campos obligatorios.</p>
+                  </span>
                   <br>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
                 <div class="modal-body">
-                      <div class="container">
-                      
-                        <dviv class="row">
-                          <div class="col-md-12">
-                            <div class="card">
-                              <div class="card-header text-center bg-info text-white">
-                                <h4>Formulario de Solicitud</h4>
-                              </div>
-                              <div class="card-body">
-                                <form action="#">
-                                  <div class="form-row">
-                      
-                                    <div class="form-group col-md-6">
-                                      <label>Rut del paciente</label>
-                                      <input type="text" class="form-control" id="rutPaciente" placeholder="Ingrese su rut">
-                                    </div>
-                      
-                                    <div class="form-group col-md-6">
-                                      <label>Previsión</label>
-                                      <select class="form-control" id="tipoPrevision">
-                                        <option value="-1"></option>
-                                      </select>
-                                    </div>
-                      
-                                    <div class="form-group col-md-6">
-                                      <label>Especialidad</label>
-                                      <select class="form-control" id="tipoEspecialidad">
-                                        <option value="-1">Seleccione una opción</option>
-                                        <option value="2">Medicina General</option>
-                                        <option value="3">Cardiologia</option>
-                                        <option value="4">Ginecologia</option>
-                                      </select>
-                                    </div>
-                      
-                                    <div class="form-group col-md-6">
-                                      <label>Región</label>
-                                      <select class="form-control" id="region">
-                                        <option value="-1">Seleccione una opción</option>
-                                        <option value="2">Metropolitana</option>
-                                        <option value="3">Antofagasta</option>
-                                        <option value="4">Concepción</option>
-                                      </select>
-                                    </div>
-                      
-                                    <div class="form-group col-md-6">
-                                      <label>Comuna</label>
-                                      <select class="form-control" id="comuna">
-                                        <option value="-1">Seleccione una opción</option>
-                                        <option value="1">Independencia</option>
-                                        <option value="2">Santiago Centro</option>
-                                        <option value="3">Ñuñoa</option>
-                                      </select>
-                                    </div>
-                      
-                                    <div class="form-group col-md-6">
-                                      <label>Centro Médico</label>
-                                      <select class="form-control" id="centroMedico">
-                                        <option value="-1">Seleccione una opción</option>
-                                        <option value="1">Ejemplo Independencia</option>
-                                        <option value="2">Ejemplo Centro</option>
-                                        <option value="3">Ejemplo Ñuñoa</option>
-                                      </select>
-                                    </div>
-                      
-                                    <div class="form-group col-md-6">
-                                      <p class="mb-1">Fecha de consulta</p>
-                                      <input name="datepicker" class="datepicker-default form-control" id="datepicker"
-                                        placeholder="Ingrese fecha">
-                                    </div>
-                      
-                                    <div class="form-group col-md-6">
-                      
-                                    </div>
-                      
-                                    <div class="form-group col-md-6">
-                                      <label>Correo Electronico</label>
-                                      <input type="text" class="form-control" id="emailPaciente" placeholder="Ingrese su email">
-                                    </div>
-                      
-                                    <div class="form-group col-md-6">
-                                      <label>Telefono Celular</label>
-                                      <input type="text" class="form-control" id="telefonoCelular">
-                                    </div>
-                      
-                                    <div class="form-group col-md-12">
-                                      <button class="btn btn-primary btn-block btn-lg" id="btnReservarHora">Reservar hora</button>
-                                    </div>
-                                  </div>
-                                </form>
-                              </div>
-                            </div>
+
+                  <div class="container mb-5" id="contenidoFormulario">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="card form-row">
+                          <div class="card-header text-center bg-info text-white">
+                            <h4>Formulario de Solicitud</h4>
                           </div>
-                  
+                          <div class="form-row">
+
+                            <div class="form-group col-md-6">
+                              <p class="mb-1 questions">Fecha de Solicitud</p>
+                              <input name="datepicker" class="datepicker-default form-control" id="datepicker"
+                                placeholder="Ingrese fecha">
+                            </div>
+
+                            <div class="form-group col-md-6" id="crearPrevision">
+                              <label class="questions">Tipo de Atención (*)</label>
+                              <select class="form-control" id="tipoPrevision">
+                                <option value="-1">--Seleccione una Opcion--</option>
+                                <option value="-1">Centro Médico</option>
+                                <option value="-1">Atención Domiciliaria</option>
+                                <option value="-1">Videoconsulta</option>
+                              </select>
+                            </div>
+
+                            <div class="form-group col-md-6" id="crearPrevision">
+                              <label class="questions">Tipo de Solicitud (*)</label>
+                              <select class="form-control" id="tipoPrevision">
+                                <option value="-1">--Seleccione una Opcion--</option>
+                                <option value="-1">Consultas</option>
+                                <option value="-1">Felicitaciones</option>
+                                <option value="-1">Requerimientos</option>
+                                <option value="-1">Sugerencias</option>
+                              </select>
+                            </div>
+
+                            <div class="form-group col-md-6" id="divApellidosPaciente">
+                              <label class="questions"></label>
+                              <input type="text" class="form-control" id="apellidosPaciente">
+                            </div>
+
+                            <div class="form-group col-md-6" id="divApellidosPaciente">
+                              <label class="questions">Nombre y Apellidos (*)</label>
+                              <input type="text" class="form-control" id="apellidosPaciente">
+                            </div>
+
+                            <div class="form-group col-md-6">
+                              <label class="questions">Rut (*) </label>
+                              <select class="form-control" id="clienteDatos">
+                                <option value="-1"></option>
+                              </select>
+                            </div>
+
+                            <div class="form-group col-md-6" id="divTelefonoCelular">
+                              <label class="questions"></label>
+                              <input type="text" class="form-control" id="telefonoCelular">
+                            </div>
+
+                            <div class="form-group col-md-6" id="divTelefonoCelular">
+                              <label class="questions">Telefono (*)</label>
+                              <input type="text" class="form-control" id="telefonoCelular">
+                            </div>
+
+                            <div class="form-group col-md-6" id="divTelefonoCelular">
+                              <label class="questions">Email (*)</label>
+                              <input type="text" class="form-control" id="telefonoCelular">
+                            </div>
+
+                            <div class="form-group col-md-6" id="divTelefonoCelular">
+                              <label class="questions">Direccion Particular (*)</label>
+                              <input type="text" class="form-control" id="telefonoCelular">
+                            </div>
+
+                            <div class="form-group col-md-12" id="divTelefonoCelular">
+                              <label class="questions">Mensaje o Sugerencia (*)</label>
+                              <input type="text" class="form-control" id="telefonoCelular">
+                            </div>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Save changes</button>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                  <button type="button" class="btn btn-primary">Enviar</button>
                 </div>
-              </div>
-            </div>
-          </div>
-      </div>
-    </div>
-  </div>
-  <div class="col mb-4">
-    <div class="card h-100 contact" style="width: 18rem">
-      <img src="assets/img/call.png"
-        class="card-img-top ct2" alt="...">
-      <div class="card-body enunciado">
-        <p class="card-text">Si necesitas ayuda con tu agendamiento, comunícate con nuestro Call Center</p>
-        <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-          +56 22679875
-        </button>
-        
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                ...
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="col mb-4">
-    <div class="card h-100 contact" style="width: 18rem">
-      <img src="assets/img/mail.png"
-        class="card-img-top ct3" alt="...">
-      <div class="card-body enunciado">
-        <br>
-        <p class="card-text">Ingresar un Reclamo</p>
-        <br>
+
+    <div class="col mb-4">
+      <div class="card h-100 contact" style="width: 18rem">
+        <img src="assets/img/call.png" class="card-img-top ct2" alt="...">
+        <div class="card-body enunciado">
+          <p class="card-text">Si necesitas ayuda con tu agendamiento, comunícate con nuestro Call Center</p>
           <!-- Button trigger modal -->
-          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-            Enviar solicitud <span><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
+            +56 227863746 <span><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
           </button>
           
           <!-- Modal -->
-          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
+                  <p class="modal-title questions" id="staticBackdropLabel">Hacer una llamada de:</p>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
                 </div>
-                <div class="modal-body">
-                  ...
+                <div class="modal-body bg-info">
+                  <img class="imgcall" src="assets/img/laptop.png" alt="">
+                  <i class="fas fa-exchange-alt"></i>
+                  <img class="imgcall2" src="assets/img/cell.png" alt="">
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Save changes</button>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Llamar</button>
                 </div>
               </div>
             </div>
           </div>
-          
-          
-          
-          
+
+        </div>
+      </div>
+    </div>
+    <div class="col mb-4">
+      <div class="card h-100 contact" style="width: 18rem">
+        <img src="assets/img/mail.png" class="card-img-top ct3" alt="...">
+        <div class="card-body enunciado">
+          <br>
+          <p class="card-text">Ingresar un Reclamo</p>
+          <br>
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+            Enviar solicitud <span><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+          </button>
+        </div>
       </div>
     </div>
   </div>
-</div>
+  <br>
+  <br>
+  <footer class="page-footer font-small blue pt-4 bg-info">
+    <div class="container-fluid text-center text-md-left">
+      <div class="row">
+        <div class="col-md-4 mt-md-0 mt-5">
+          <div class="container">
+            <img src="assets/img/LogoForma2.png" alt="" width="200px;" height="150px;">
+          </div>
+        </div>
+        <hr class="clearfix w-100 d-md-none pb-3">
+  
+        <div class="col-md-2 mb-md-0 mb-1">
+          <h5 class="text-uppercase text-white">Información al paciente</h5>
+          <ul class="list-unstyled mt-4">
+            <li>
+              <a style="color:rgb(107, 4, 93);" href="#!">¿Quienes somos?</a>
+            </li>
+            <li>
+              <a style="color:rgb(107, 4, 93);" href="#!">Contáctanos</a>
+            </li>
+            <li>
+              <a style="color:rgb(107, 4, 93);" href="#!">Centro medicos disponibles</a>
+            </li>
+            <li>
+              <a style="color:rgb(107, 4, 93);" href="#!">Convenios y Beneficios</a>
+            </li>
+          </ul>
+  
+          <h5 class="text-uppercase text-white">Acerca de nosotros</h5>
+          <ul class="list-unstyled mt-4" ">
+            <li>
+              <a style="color:rgb(107, 4, 93);" href="#!">¿Quienes somos?</a>
+            </li>
+            <li>
+              <a style="color:rgb(107, 4, 93);" href="#!">Trabaja con nosotros</a>
+            </li>
+          </ul>
+        </div>
+  
+        <div class="col-md-3 mb-md-0 mb-1">
+          <h5 class="text-uppercase text-white">Información del Covid</h5>
+          <ul class="list-unstyled mt-4">
+            <li>
+              <a style="color:rgb(107, 4, 93);" href="#!">Reserva hora PCR</a>
+            </li>
+  
+            <li>
+              <a style="color:rgb(107, 4, 93);" href="#!">Conoce los sintomas</a>
+            </li>
+            <li>
+              <a style="color:rgb(107, 4, 93);" href="#!">Reserva Videoconsulta</a>
+            </li>
+            <li>
+              <a style="color:rgb(107, 4, 93);" href="#!">Reserva hora para vacuna</a>
+            </li>
+          </ul>
+  
+          <h5 class="text-uppercase text-white">Reserva tu hora</h5>
+          <ul class="list-unstyled mt-4">
+            <li>
+              <a style="color:rgb(107, 4, 93);" href="#!">Reserva tu hora medicina general</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2020 Copyright:
+      <a style="color:rgb(107, 4, 93);" href="#"> InMed.com</a>
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
 
 
 
 
 
- 
+
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -289,8 +337,14 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
     crossorigin="anonymous"></script>
-    <script src="assets/js/formContact.js"></script>
-
+  <script src="assets/js/formContact.js"></script>
+  <script src="assets/js/formulario.js "></script>
+  <!--<script src="assets/js/jquery/jquery.min.js"></script>
+      <script src="assets/js/select2/js/select2.full.min.js"></script>
+      <script src="assets/js/pickadate/picker.js"></script>
+      <script src="assets/js/pickadate/picker.date.js"></script>
+      <script src="assets/js/pickadate/pickadate-init.js"></script>
+      -->
 </body>
 
 </html>
