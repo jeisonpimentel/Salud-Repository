@@ -264,12 +264,15 @@ function initMap(){
 
     map = new google.maps.Map(document.getElementById('map'), {
         center: {
-            lat: -33.4479619,
-            lng: -70.6413371
+            lat: -33.4479574,
+            lng: -70.6435258
         },
         zoom: 8
     });
-}
+};
+
+
+
 // - Funciones estaticas -
 // - [Espacio Reservado]
 // - Fin de funciones estaticas -
