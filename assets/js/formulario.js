@@ -252,6 +252,24 @@ function cargarDatosCliente(){
     mostrarDatosCliente();
 }
 
+// function iniciaMap(){
+//     var coord = {lat:,lng:};
+//     var map = new google.maps.Map(document.getElementById('map'), {
+//         zoom: 10,
+//         center: coord
+//     });
+// }
+
+function initMap(){
+
+    map = new google.maps.Map(document.getElementById('map'), {
+        center: {
+            lat: -33.4479619,
+            lng: -70.6413371
+        },
+        zoom: 8
+    });
+}
 // - Funciones estaticas -
 // - [Espacio Reservado]
 // - Fin de funciones estaticas -

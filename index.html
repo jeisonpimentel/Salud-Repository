@@ -15,9 +15,7 @@
     crossorigin="anonymous"></script>
 
   <link rel="stylesheet" href="assets/css/estilos.css">
-
-
-  <title>Centro Medico</title>
+  <title>Centro Medico InMed</title>
 </head>
 
 <body>
@@ -48,7 +46,7 @@
   <!--INICIO: Contenido reutilizable NavBar-->
   <nav class="navbar navbar-expand-lg navbar-light bg-info">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#"><img src="assets/img/LogoForma2.png" alt=""></a>
+      <a class="navbar-brand" href="index.html"><img src="assets/img/LogoForma2.png" alt=""></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
         aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -69,9 +67,9 @@
               Información Al Paciente
             </a>
             <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">¿Quienes somos?</a>
-              <a class="dropdown-item" href="#">Contáctanos</a>
-              <a class="dropdown-item" href="#">Centros medicos disponibles</a>
+              <a class="dropdown-item" href="quienes-somos.html">¿Quienes somos?</a>
+              <a class="dropdown-item" href="convenios.html">Contáctanos</a>
+              <a class="dropdown-item" href="centros-disponibles.html">Centros medicos disponibles</a>
             </div>
           </li>
 
@@ -82,22 +80,18 @@
               Información sobre el COVID
             </a>
             <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Reserva hora para PCR</a>
-              <a class="dropdown-item" href="#">Reserva hora para vacuna</a>
-              <a class="dropdown-item" href="#">Conoce los síntomas</a>
+              <a class="dropdown-item" href="reserva-hora-form.html">Reserva hora para PCR</a>
+              <a class="dropdown-item" href="reserva-hora-form.html">Reserva hora para vacuna</a>
+              <a class="dropdown-item" href="info-covid.html">Conoce más...</a>
             </div>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link mr-2 text-white" href="#" style="font-size: 17px;">Videoconsulta</a>
+            <a class="nav-link mr-2 text-white" href="reserva-hora-online.html" style="font-size: 17px;">Videoconsulta</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link mr-2 text-white" href="#" style="font-size: 17px;">Convenios o Beneficios</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link mr-5 text-white" href="#" style="font-size: 17px;">Login</a>
+            <a class="nav-link mr-2 text-white" href="convenios.html" style="font-size: 17px;">Convenios o Beneficios</a>
           </li>
         </ul>
       </div>
@@ -106,96 +100,135 @@
   <!--FIN: Contenido reutilizable NavBar-->
 
   <!--Inicio: Carousel propio de la pagina principal-->
-  <div class="container mt-5">
-    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-      <div class="carousel-inner">
+  <div class="bg-light">
+    <div class="container mt-5">
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
 
-        <div class="carousel-item active">
-          <a href="reserva-hora-online.html"><img src="assets/img/imagen-carousel1.png" d-block w-100" alt="..."
-              width="100%;" height="400px;"></a>
+          <div class="carousel-item active">
+            <a href="reserva-hora-online.html"><img src="assets/img/imagen-carousel1.png" d-block w-100" alt="..."
+                width="100%;" height="400px;"></a>
+          </div>
+
+          <div class="carousel-item">
+            <a href="#"><img src="assets/img/imagen-carousel2.png" class="d-block w-100" alt="..." width="100%;"
+                height="400px;"></a>
+          </div>
+
+          <div class="carousel-item">
+            <a href="centros-disponibles.html"><img src="assets/img/imagen-carousel3.png" class="d-block w-100" alt="..."
+                width="100%;" height="400px;"></a>
+          </div>
+
         </div>
-
-        <div class="carousel-item">
-          <a href="#"><img src="assets/img/imagen-carousel2.png" class="d-block w-100" alt="..." width="100%;"
-              height="400px;"></a>
-        </div>
-
-        <div class="carousel-item">
-          <a href="centros-disponibles.html"><img src="assets/img/imagen-carousel3.png" class="d-block w-100" alt="..."
-              width="100%;" height="400px;"></a>
-        </div>
-
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Siguiente</span>
+        </a>
       </div>
-      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Anterior</span>
-      </a>
-      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Siguiente</span>
-      </a>
     </div>
   </div>
   <!--FIN: Carousel propio de la pagina principal-->
 
   <div class="ligth">
     <div class="container contenedor">
-      <div>
-        <h1 class="text-center">Te invitamos a conocer lo que opinan de
-          nosotros</h1>
-        <h4 class="text-center py-3">Esperemos que seas parte de esta familia</h4>
-
-      </div>
       <div class="row justify-content-center">
         <div class="col-md-4">
+
           <div class="card shadow" style="width: 20rem;">
             <div class="inner">
-              <img src="assets/img/Dentales.jpg" class="card-img-top" alt="SegundaPersona">
+              <img src="assets/img/foto_0000001120200420102631.jpg" class="card-img-top" alt="SegundaPersona">
             </div>
             <div class="card-body text-center">
-              <h5 class="card-title">Virginia Casique</h5>
-              <p class="card-text">Estar asegurado en esta compañia es
-                sentirse seguro en todo momento, cuenta con las mejores
-                opciones.</p>
-              <br /> <a class="btn btn-outline-danger boton" href="/contactanos">Leer más...</a>
+              <h5 class="card-title" style="font-size: 22px;"">Centros Médicos</h5>
+              <p class="card-text" style="text-align: justify;">Conoce nuestros horarios y centros médicos mas cercano a tu ubicación,
+              garantizamos las medidas de seguridad.</p>
+              <br /> <a class="btn btn-primary boton" href="centros-disponibles.html">Mas información</a>
             </div>
           </div>
         </div>
+
         <div class="col-md-4">
           <div class="card shadow" style="width: 20rem;">
             <div class="inner">
-              <img src="assets/img/caluga-home-liberty-hogar.jpg" class="card-img-top" alt="primeraPersona">
+              <img src="assets/img/foto_0000002420200407135428.jpg" class="card-img-top" alt="SegundaPersona">
             </div>
             <div class="card-body text-center">
-              <h5 class="card-title">Jeison Pimentel</h5>
-              <p class="card-text">Estar asegurado en esta compañia es
-                sentirse seguro en todo momento, cuenta con las mejores
-                opciones.</p>
-              <br /> <a class="btn btn-outline-danger boton" href="contactanos">Leer más...</a>
+              <h5 class="card-title" style="font-size: 22px;"">Convenio y Beneficios</h5>
+              <p class="card-text" style="text-align: justify;">Conoce nuestros convenios y beneficios, tenemos diferentes opciones de pago
+              para tu comodidad.</p>
+              <br /> <a class="btn btn-primary boton" href="convenios.html">Mas información</a>
             </div>
           </div>
         </div>
+
         <div class="col-md-4">
           <div class="card shadow" style="width: 20rem;">
             <div class="inner">
-              <img src="assets/img/caluga-home-atencion-terceros.png" class="card-img-top" alt="TerceraPersona">
+              <img src="assets/img/foto_0000001920200407140537.jpg" class="card-img-top" alt="SegundaPersona">
             </div>
             <div class="card-body text-center">
-              <h5 class="card-title">Liah Cataleya</h5>
-              <p class="card-text">Estar asegurado en esta compañia es
-                sentirse seguro en todo momento, cuenta con las mejores
-                opciones.</p>
-              <br /> <a class="btn btn-outline-danger boton" href=contactanos">Leer más...</a>
+              <h5 class="card-title" style="font-size: 22px;"">Videoconsultas</h5>
+              <p class="card-text" style="text-align: justify;">Agenda tu consulta online con nuestros mejores especialistas,
+              es nuestra mejor opción en tiempos de pandemia.</p>
+              <br /> <a class="btn btn-primary boton" href="reserva-hora-online.html">Mas información</a>
             </div>
           </div>
         </div>
+
       </div>
     </div>
   </div>
+  
+  <div class="bg-light">
+    <div class="container py-5">
+      <h1 class="text-center">Muy saludable: Explora un estilo de vida mas saludable y feliz</h1>
+      <br>
 
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+            <!-- <img src="assets/img/icon_procedimientos.svg" class="card-img-top" alt="..." height="150px;"> -->
+            <div class="card-body">
+              <h4 class="card-text text-dark" style="font-weight: bold;">Infórmate: Mitos y verdades sobre el Covid–19</h4>
+              <p style="font-size: 20px; text-align: justify;">Revisa e infórmate en detalle sobre este nuevo virus, el que se puede prevenir a partir de medidas básicas de higiene –al igual que otros virus...</p>
+              <button id="reservaMedicaKinesiolgia" class="btn btn-info btn-xs btn-block">Más información</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card">
+            <!-- <img src="assets/img/icon_procedimientos.svg" class="card-img-top" alt="..." height="150px;"> -->
+            <div class="card-body">
+              <h4 class="card-text text-dark" style="font-weight: bold;">Fase 1: ¿Què hacer ante esta nueva etapa?</h4>
+              <p style="font-size: 20px; text-align: justify;">En la fase 1 del Coronavirus se produce circulación viral y dispersión comunitaria de la enfermedad, protegete y quedate en casa...</p>
+              <button id="reservaMedicaKinesiolgia" class="btn btn-info btn-xs btn-block">Más información</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card">
+            <!-- <img src="assets/img/icon_procedimientos.svg" class="card-img-top" alt="..." height="150px;"> -->
+            <div class="card-body">
+              <h4 class="card-text text-dark" style="font-weight: bold;">¿Como manejar la ansiedad estando en casa y en familia?</h4>
+              <p style="font-size: 20px; text-align: justify;">Te entregamos consejos para llevar estos dias en cuarentena de la mejor manera posible, sabemos que son momentos muy dificiles...</p>
+              <button id="reservaMedicaKinesiolgia" class="btn btn-info btn-xs btn-block">Más información</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
   <!--INICIO: Creación del Footer-->
   <div>
-    <img src="assets/img/fondo2.png" alt="imagen-footer">
+    <img src="assets/img/fondo2.png" alt="imagen-footer" width="100%;">
   </div>
 
   <footer class="page-footer font-small blue pt-4 bg-info">
