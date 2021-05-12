@@ -7,12 +7,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
     integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  
+  <link rel="stylesheet" href="assets/sweetalert2/dist/sweetalert2.min.css">
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
     crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
     crossorigin="anonymous"></script>
+    
+  <script src="assets/sweetalert2/dist/sweetalert2.min.js"></script>
 
   <!--Select 2-->
   <link rel="stylesheet" href="assets/js/select2/css/select2.min.css">
@@ -175,7 +179,7 @@
             <h4>Reserva tú hora</h4>
           </div>
           <div class="card-body">
-            <form action="#">
+          <!--  <form action="#"> -->
               <div class="form-row">
 
                 <div class="form-group col-md-6">
@@ -186,28 +190,29 @@
                 </div>
 
                 <div class="form-group col-md-6">
-                  <!--Espacio Vacio-->
+                  <label><br></label>
+                  <button id="btnLimpiarFormulario" class="btn btn-dark btn-block" style="height: 30px;">Limpiar formulario</button>
                 </div>
 
                 <div class="form-group col-md-6" id="divNombrePaciente">
                   <label>Nombre completo</label>
-                  <input type="text" class="form-control" id="nombrePaciente">
+                  <input type="text" class="form-control" id="nombrePaciente" readonly>
                 </div>
 
                 <div class="form-group col-md-6" id="divApellidosPaciente">
                   <label>Apellidos</label>
-                  <input type="text" class="form-control" id="apellidosPaciente">
+                  <input type="text" class="form-control" id="apellidosPaciente" readonly>
                 </div>
 
 
                 <div class="form-group col-md-6" id="divEmailPaciente">
                   <label>Correo Electronico</label>
-                  <input type="text" class="form-control" id="emailPaciente">
+                  <input type="text" class="form-control" id="emailPaciente" readonly>
                 </div>
 
                 <div class="form-group col-md-6" id="divTelefonoCelular">
                   <label>Telefono Celular</label>
-                  <input type="text" class="form-control" id="telefonoCelular">
+                  <input type="text" class="form-control" id="telefonoCelular" readonly>
                 </div>
 
                 <div class="form-group col-md-6" id="crearPrevision">
@@ -251,14 +256,34 @@
                     placeholder="Ingrese fecha">
                 </div>
 
-                <div class="form-group col-md-6">
+                <div class="form-group col-md-6" id="divTipoMoneda">
+                  <label>Monto a pagar</label>
+                  <input type="text" class="form-control" id="precioConsulta" readonly>
+                </div>
+
+                <div class="form-group col-md-6" id="montoTotalPagar">
+                  <label>Tipo de moneda</label>
+                  <select class="form-control" id="formaPago">
+                    <option value="-1">Seleccione tipo de moneda</option>
+                  </select>
+                </div>
+
+                <div class="form-group col-md-6" id="divPrecioConsultaDivisa">
+                  <label>Precio según forma de pago</label>
+                  <input type="text" class="form-control" id="precioConsultaDivisa" readonly>
+                </div>
+
+                <div class="form-group col-md-6" id="divMontoCancelar">
+                  <label>Ingrese monto a cancelar</label>
+                  <input type="text" class="form-control" id="montoCancelar">
+                </div>
 
                 </div>
                 <div class="form-group col-md-12">
-                  <button class="btn btn-info btn-block btn-lg" id="btnReservarHora">Buscar horas disponibles</button>
+                  <button class="btn btn-info btn-block btn-lg" id="btnReservarHora">Reservar hora</button>
                 </div>
               </div>
-            </form>
+            <!-- </form>-->
           </div>
         </div>
       </div>
