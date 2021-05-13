@@ -8,7 +8,7 @@ $("#btnlogin").click(function () {
     validador = true;
 
 
-    if (rut == "") {
+    if (rut == "" || typeof rut == 'String') {
         validador = false;
         $("#mensaje1").append('<small> Formato de RUT inválido </small>')
     } else{
@@ -23,11 +23,10 @@ $("#btnlogin").click(function () {
     }
 
     if (validador) {
-        alert('Iniciaste Sesion Correctamente');
-        /*$("#lbl_SigIn").append("<small>  </small>"));*/
+        alert('INICIASTE SESIÓN');
 
     } else {
-        alert('Intentelo nuevamente');
+        alert('INTENTELO NUEVAMENTE');
     }
 
 
