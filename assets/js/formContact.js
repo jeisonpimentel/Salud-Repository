@@ -8,7 +8,7 @@ $("#btnlogin").click(function () {
     validador = true;
 
 
-    if (rut == "" || typeof rut == 'String') {
+    if (rut == "" || typeof rut == 'String' || rut.length < 8) {
         validador = false;
         $("#mensaje1").append('<small> Formato de RUT inválido </small>')
     } else{
@@ -28,6 +28,5 @@ $("#btnlogin").click(function () {
     } else {
         alert('INTENTELO NUEVAMENTE');
     }
-
 
 });
