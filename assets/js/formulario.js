@@ -105,12 +105,13 @@ const tipoMoneda = [
     {id: "1", moneda: "Dolar"},
     {id: "2", moneda: "Euro"},
     {id: "3", moneda: "UF"},
-    {id: "4", moneda: "UTM"},
 ]
 
-let parametro     = '';
-let valorMoneda   = 0;
-let montoConsulta = 0
+
+let parametro           = '';
+let valorMoneda         = 0;
+let montoConsulta       = 0;
+let montoPagarDivisa    = 0;
 // - Fin de constantes -
 
 // - Inicio de (document).ready() -
@@ -126,7 +127,10 @@ $(document).ready(function() {
     $('#formaPago').change(function(){
         parametro   = parametroParaApiRest();
         apiIndicadorValorMonedas(parametro);
-        montoPagarPorDivisa();
+    });
+
+    $('#btnPagarConsulta').click(function(){
+        montoIngresadoPagar();
     });
 
     $('#reservaMedicaKinesiolgia').click(function () {
@@ -275,6 +279,9 @@ const esconderComponenentesHTML = () =>{
     $('#montoTotalPagar').hide();
     $('#divPrecioConsultaDivisa').hide();
     $('#divMontoCancelar').hide();
+    $('#divDiferenciaFavor').hide();
+    $('#divBtnPagarConsulta').hide();
+
 }
 
 const mostrarDatosCliente = () =>{
@@ -321,21 +328,53 @@ const limpiarFormulario = () => {
     $('#datepicker').val("");
     $('#precioConsulta').val("");
     $('#formaPago').val("-1");
-    Swal.fire('Alerta', 'Formulario limpiado correctamente', 'warning');
+    //Swal.fire('Alerta', 'Formulario limpiado correctamente', 'warning');
 }
 
 const reservaHora = () => {
-    Swal.fire('Reserva realizada', 'Se ha realizado la reserva satisfactoriamente', 'success');
+    let id = new Date().getTime();
+
+    if($("#clienteDatos").val() == -1) {
+        Swal.fire('Atención', 'Debe seleccionar un paciente.', 'error');
+        return false;
+    } else if($('#tipoPrevision').val() == -1){
+        Swal.fire('Atención', 'Debe seleccionar un tipo de previsión.', 'error');
+        return false;
+    } else if($('#especialidades').val() == -1){
+        Swal.fire('Atención', 'Debe seleccionar un tipo de especialidad.', 'error');
+        return false;
+    } else if($('#region').val() == -1){
+        Swal.fire('Atención', 'Debe seleccionar una región.', 'error');
+        return false;
+    } else if($('#comuna').val() == -1){
+        Swal.fire('Atención', 'Debe seleccionar una comuna.', 'error');
+        return false;
+    } else if($('#centroMedico').val() == -1){
+        Swal.fire('Atención', 'Debe seleccionar un centro médico.', 'error');
+        return false;
+    } else if($('#datepicker').val().length == 0){
+        Swal.fire('Atención', 'Debe seleccionar una fecha de consulta.', 'error');
+        return false;
+    } else if($('#formaPago').val() == -1){
+        Swal.fire('Atención', 'Debe seleccionar una forma de pago.', 'error');
+        return false;
+    } else if($('#montoCancelar').val().length == 0){
+        Swal.fire('Atención', 'Debe ingresar el monto a pagar', 'error');
+        return false;
+    } else {
+        Swal.fire('Reserva realizada', `Se ha realizado la reserva Nro. ${id} satisfactoriamente`, 'success');
+        limpiarFormulario();
+    }
 }
 
 const apiIndicadorValorMonedas = ( parametro ) => {
+    let moneda;
     $.ajax({
         type:"GET",
         url: `https://mindicador.cl/api/${parametro}`,
         success:function(response) {
-            //console.log(response.serie[0].valor);
-            valorMoneda = Math.round(response.serie[0].valor);
-            console.log('Valor moneda: ', valorMoneda);	
+            moneda = response.serie[0].valor;
+            montoPagarPorDivisa(moneda);
         }
     });
 }
@@ -348,28 +387,37 @@ const mostrarFormaDePago = () => {
     $('#precioConsulta').val('$' + montoConsulta);
 }
 
-const montoPagarPorDivisa = () => {
-    let montoPagar = montoConsulta / valorMoneda;
-    $('#precioConsultaDivisa').val('$' + montoPagar);
+const montoPagarPorDivisa = (moneda) => {
+    let montoPagar = (montoConsulta / moneda).toFixed(2);
+    let valor      = $('#formaPago').val();
+
+    if(valor == 1){
+        $('#precioConsultaDivisa').val('$' + montoPagar);
+    } else if(valor == 2){
+        $('#precioConsultaDivisa').val('€' + montoPagar);
+    } else if(valor == 3){
+        $('#precioConsultaDivisa').val('UF ' + montoPagar);
+    }
+
+    montoPagarDivisa = montoPagar;
 }
 
 const parametroParaApiRest = () => {
     let valor     = $('#formaPago').val();
     let parametro = '';
 
-    if(valor == 1){
+    if(valor == "1"){
         parametro = 'dolar';
-    } else if(valor == 2 ){
-        parametro = 'euro';
-    } else if(valor == 3 ){
+    } else if(valor == "2"){
+        parametro = "euro";
+    } else if(valor == "3"){
         parametro = 'uf';
-    } else if(valor == 4 ){
-        parametro = 'utm';
     }
 
     if(valor != -1){
         $('#divPrecioConsultaDivisa').show(500);
         $('#divMontoCancelar').show(500);
+        $('#divBtnPagarConsulta').show(500);
     }
 
     return parametro;
@@ -394,4 +442,31 @@ const precioConsulta = () => {
     }
 
     return precioConsulta;
+}
+
+
+const montoIngresadoPagar = () => {
+
+    let montoConsulta   = montoPagarDivisa;
+    let montoIngresado  = $('#montoCancelar').val();
+    let diferenciaFavor =  montoIngresado - montoConsulta;;
+    let valor           = $('#formaPago').val();
+
+
+    if(diferenciaFavor >= 0){
+        
+        if(valor == 1){
+            $('#diferenciaFavor').val('$' + diferenciaFavor.toFixed(2));
+            $('#divDiferenciaFavor').show(500);
+        } else if(valor == 2){
+            $('#diferenciaFavor').val('€' + diferenciaFavor.toFixed(2));
+            $('#divDiferenciaFavor').show(500);
+        } else if(valor == 3){
+            $('#diferenciaFavor').val('UF ' + diferenciaFavor.toFixed(2));
+            $('#divDiferenciaFavor').show(500);
+        }
+    } else{
+        Swal.fire('Alerta', 'Monto ingresado no cubri el valor de la consulta', 'error');
+        $('#divDiferenciaFavor').hide();
+    }
 }
