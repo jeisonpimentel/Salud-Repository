@@ -14,6 +14,9 @@
       crossorigin="anonymous"></script>
     <link rel="stylesheet" href="assets/css/estilos.css">
     <title>Centros Medicos Disponibles</title>
+      <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
   </head>
 <body>
       <!--INICIO: Contenido reutilizable mensaje informativo-->
@@ -89,11 +92,72 @@
           <li class="nav-item">
             <a class="nav-link mr-2 text-white" href="convenios.html" style="font-size: 17px;">Convenios o Beneficios</a>
           </li>
+
+          <li>
+            <button type="button" class="btn btn-warning" style="border-radius: 10px; color: white; width: 110%;"
+              data-toggle="modal" data-target="#exampleModal">
+              <i class="fa fa-user fs-15 m-r-10"></i> <br>
+              Iniciar Sesion
+            </button>
+          </li>
+
         </ul>
       </div>
     </div>
   </nav>
   <!--FIN: Contenido reutilizable NavBar-->
+
+  <!--Modal Login -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header text-center bg-info text-white">
+          <span>
+            <h4>Inicio de Sesión</h4>
+          </span>
+          <br>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+  
+          <div class="container mb-5" id="contenidoFormulario">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="card form-row">
+  
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label>RUT Paciente (12345678-9)</label>
+                      <input type="text" class="form-control" id="txt_rut">
+                      <small id="lbl_rut" class="form-text text-danger">Formato de RUT inválido</small>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="form-group col-md-6">
+                      <label for="exampleInputPassword1" class="form-text text-black">Contraseña</label>
+                      <input type="password" class="form-control" id="txt_contrasena">
+                      <small id="lbl_contrasena" class="form-text text-danger">Contraseña inválida</small>
+                    </div>
+  
+  
+                    <div class="form-group col-md-12">
+                      <button class="btn btn-info btn-block btn-lg" id="btnlogin"> Iniciar sesión</button>
+                    </div>
+  
+                    <p>¿No tienes una cuenta? <a href="registro.html" class="link"> Crear Cuenta</a> </p>
+                  </div>
+  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </div>
 
   <!--INICIO:  Carousel-->
       <div id="carouselExampleCaptions" class="carousel slide container py-5" data-ride="carousel">
