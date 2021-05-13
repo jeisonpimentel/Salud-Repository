@@ -23,10 +23,11 @@ $("#btnlogin").click(function () {
     }
 
     if (validador) {
-        $("#lbl_SigIn").alert("Usuario registrado correctamente");
+        alert('Iniciaste Sesion Correctamente');
+        /*$("#lbl_SigIn").append("<small>  </small>"));*/
 
     } else {
-        $("#lbl_SigIn").append('<small> Intentelo nuevamente </small>');
+        alert('Intentelo nuevamente');
     }
 
 
