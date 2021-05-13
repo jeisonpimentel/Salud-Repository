@@ -96,50 +96,80 @@
   <!--FIN: Contenido reutilizable NavBar-->
 
 
-  <!--INICIO DE LOGIN-->
-
   <div class="m-4 row justify-content-center" id="contenidoFormulario">
-    <dviv class="row">
-      <div class="col-md-12">
+    <dviv class="row justify-content-center">
+      <div class="col-md-6">
         <div class="card">
           <div class="card-header text-center bg-info text-white">
-            <h4>Inicio de sesión</h4>
+            <h4>Registrate</h4>
           </div>
           <div class="card-body">
           <!--  <form action="#"> -->
-              <div class="m-2 row justify-content-center">
+              <div class="form-row">
 
-                <div class="form-group col-md-6">
+                <div class="form-group col-md-12">
                   <label>RUT Paciente (12345678-9)</label>
                   <input type="text" class="form-control" id="txt_rut">
                   <small id="lbl_rut" class="form-text text-danger">Formato de RUT inválido</small>
                 </div>
-                <br>
-                <br>
-                <div class="form-group col-md-6">
+
+                <div class="form-group col-md-6" id="divNombrePaciente">
+                  <label>Nombres</label>
+                  <input type="text" class="form-control" id="nombrePaciente" readonly>
+                </div>
+
+                <div class="form-group col-md-6" id="divApellidosPaciente">
+                  <label>Apellidos</label>
+                  <input type="text" class="form-control" id="apellidosPaciente" readonly>
+                </div>
+
+                <div class="form-group col-md-6" id="divContrasena">
                     <label for="exampleInputPassword1"class="form-text text-black">Contraseña</label>
                     <input type="password" class="form-control" id="txt_contrasena">
-                    <small id="lbl_contrasena" class="form-text text-danger">Contraseña inválida</small>
+                    <small id="lbl_contrasena" class="form-text text-danger">La contraseña debe tener al menos 8 caracteres</small>
                 </div>
-              
-              
+
+                <div class="form-group col-md-6" id="divConfContra">
+                    <label for="exampleInputPassword1"class="form-text text-black">Confirmar Contraseña</label>
+                    <input type="password" class="form-control" id="txt_conf_contra">
+                    <small id="lbl_conf_contra" class="form-text text-danger">Las contraseñas ingresadas no coinciden</small>
+                  </div>
+
+                <div class="form-group col-md-6" id="divEmailPaciente">
+                  <label>Correo Electronico</label>
+                  <input type="text" class="form-control" id="emailPaciente" readonly>
+                </div>
+
+                <div class="form-group col-md-6" id="divTelefonoCelular">
+                  <label>Telefono Celular</label>
+                  <input type="text" class="form-control" id="telefonoCelular" readonly>
+                </div>
+
+                <div class="form-group col-md-6" id="crearPrevision">
+                  <label>Previsión</label>
+                  <select class="form-control" id="tipoPrevision">
+                    <option value="-1"></option>
+                  </select>
+                </div>
+
                 <div class="form-group col-md-12">
-                  <button class="btn btn-info btn-block btn-lg" id="btnlogin"> 
+                  <button class="btn btn-info btn-block btn-lg" id="btnReservarHora"> 
                       
-                <i class="fa fa-user fs-15 m-r-10"> 
+                <i class="fa fa-user fs-15 m-r-10">
+                           ☻  
                 </i>
-                    Iniciar sesión</button>
+                    Crear cuenta</button>
                 </div>
 
-                <p>¿No tienes una cuenta? <a href="registro.html" class="link"> Crear Cuenta</a> </p>
 
-              </div >
+
+              </div>
             <!-- </form>-->
           </div>
         </div>
       </div>
   </div>
-  <!--FIN DE LOGIN-->
+  </div>
 
 
     <!--INICIO: Creación del Footer-->
